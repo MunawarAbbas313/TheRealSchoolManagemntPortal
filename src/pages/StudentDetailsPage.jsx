@@ -309,10 +309,10 @@ const StudentDetailsPage = () => {
             const pageWidth = doc.internal.pageSize.width;
 
             doc.setFontSize(22); doc.setFont('helvetica', 'bold');
-            doc.text("Savvy School", pageWidth / 2, y, { align: 'center' });
+            doc.text("The Real School and College", pageWidth / 2, y, { align: 'center' });
             y += 8;
             doc.setFontSize(14); doc.setFont('helvetica', 'normal');
-            doc.text("Quaid-e-Azam Campus", pageWidth / 2, y, { align: 'center' });
+            doc.text("Tarami Campus", pageWidth / 2, y, { align: 'center' });
             y += 8;
             doc.setFontSize(16); doc.setFont('helvetica', 'bold');
             doc.text("Official Student Fee Report", pageWidth / 2, y, { align: 'center' });
@@ -402,7 +402,7 @@ const StudentDetailsPage = () => {
                 y += 10;
             });
 
-            doc.save('Savvy_School_Fee_Report.pdf');
+            doc.save('The_Real_School-and_College-Fee_Report.pdf');
             toast.success("Report generated!");
         } catch (error) {
             toast.error("Failed to generate PDF report.");
