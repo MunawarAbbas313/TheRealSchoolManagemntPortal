@@ -10,6 +10,7 @@ import LoginPage from './pages/Login';
 import DashboardPage from './pages/Dashboard';
 import StudentDetailsPage from './pages/StudentDetailsPage';
 import StaffDetailsPage from './pages/StaffDetailsPage ';
+import FeeSlipPaage from './pages/FeeSlipPage';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -41,6 +42,7 @@ function App() {
         <Route path="/" element={user ? <DashboardPage /> : <Navigate to="/login" />} />
         <Route path="/students" element={user ? <StudentDetailsPage /> : <Navigate to="/login" />} />
         <Route path="/staff" element={user ? <StaffDetailsPage /> : <Navigate to="/login" />} />
+        <Route path='/feegeneration' element={user ? <FeeSlipPaage/> : <Navigate to="/login"/>}/>
       </Routes>
       {user && <Footer />}
     </Router>
